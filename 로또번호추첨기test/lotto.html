@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <title>로또 번호 추첨기</title>
+    <link rel="stylesheet" href="lotto.css">
+
+
+</head>
+<body>
+     <h1>로또 번호 추첨기</h1>
+     <script>
+
+        // var name='엄준식';
+        // document.write(name);
+
+        // var age=30;
+        // document.write(typeof age);
+
+        // var eyesight=1.2;
+        // document.write(typeof eyesight);
+
+        // var num = Math.random()*45+1;
+        // var ball1 = parseInt(num)
+        // document.write(ball1);
+
+        // var single=true;
+        // document.write(typeof single);
+
+        // var lotto = []
+        // for (var i = 0; i < 6; i++){
+        //     var num = parseInt(Math.random() * 45 + 1 );
+        //     if (lotto.indexOf(num) == -1 ) {
+        //         lotto.push(num);
+        //     }
+        // // }
+        // // document.write(lotto);
+            
+        var lotto = []
+        while (lotto.length < 6) {
+            var num = parseInt(Math.random() * 45 + 1 );
+            if (lotto.indexOf(num) == -1 ) {
+                lotto.push(num);
+            }
+        }
+        lotto.sort((a,b)=>a-b);
+        // document.write(lotto);
+        
+        document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+        document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+        document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+        document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+        document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+        document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+     </script>
+
+</body>
+</html>
